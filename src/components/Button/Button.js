@@ -1,8 +1,6 @@
 import React from 'react';
-import PropType from 'prop-types'
 import { Button as ButtonBase } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles'
-import className from 'classnames';
 
 const useStyles = makeStyles({
     root: {
@@ -24,9 +22,5 @@ const Button = props => {
         <ButtonBase {...props} className={classes.root} />
     );
 }
-
-/*Button.propType = {
-    className: PropType.string
-};*/
 
 export default Button;

@@ -1,15 +1,14 @@
 import React, {Component} from 'react';
-import { Button } from './components';
+import { Route } from 'react-router-dom';
+import {Auth, Home} from './pages';
 
 
 class App extends Component {
   render() {
     return (
       <div className="wrapper">
-        <h1>Hello, World!</h1>
-        <Button className='qwe' type='primary'>
-          This is button
-        </Button>
+        <Route exact path={['/', '/singin', '/singup']} component={Auth}/>
+        <Route exact path='/home' component={Home}/>
       </div>
     );  
   }
